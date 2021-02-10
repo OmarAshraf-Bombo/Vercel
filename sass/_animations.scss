@@ -3,14 +3,17 @@
     background: transparent;
     color: black;
     -webkit-background-clip: border-box;
+    -moz-background-clip: border-box;
+    -o-background-clip: border-box;
     background-clip: border-box;
   }
   to {
     background: $blue-gradient;
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
     background-clip: text;
-    background-position: bottom right;
   }
 }
 
@@ -19,12 +22,16 @@
     background: transparent;
     color: black;
     -webkit-background-clip: border-box;
+    -moz-background-clip: border-box;
+    -o-background-clip: border-box;
     background-clip: border-box;
   }
   to {
     background: $purple-gradient;
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
     background-clip: text;
   }
 }
@@ -34,12 +41,16 @@
     background: transparent;
     color: black;
     -webkit-background-clip: border-box;
+    -moz-background-clip: border-box;
+    -o-background-clip: border-box;
     background-clip: border-box;
   }
   to {
     background: $yellow-gradient;
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
     background-clip: text;
   }
 }
