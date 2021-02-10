@@ -97,7 +97,7 @@ header {
     }
     #mob-nav {
       width: 100%;
-      background-color: rgba(204, 204, 204, 0.9);
+      background-color: rgba(255, 255, 255, 0.95);
       position: absolute;
       top: -350px;
       left: 0;
@@ -220,6 +220,9 @@ header {
 
 @media (max-width: 576px) {
   #hero {
+    h2 {
+      animation-name: none !important;
+    }
     .btns {
       a {
         font-size: 16px;
