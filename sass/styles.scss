@@ -1,15 +1,21 @@
-// --------------------------------------------------------------------------------- Variables --------------------
+// --------------------------------------------------------------------------------- Variables ******
+@import "variables";
 
-$blue-gradient: linear-gradient(90deg, #007cf0, #00dfd8);
-$purple-gradient: linear-gradient(90deg, #7928ca, #ff0080);
-$yellow-gradient: linear-gradient(90deg, #ff4d4d, #f9cb28);
+// --------------------------------------------------------------------------------- Extends ******
+%h2 {
+  letter-spacing: -0.05em;
+  font-size: 3.75rem;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  text-align: center;
+  text-transform: capitalize;
+}
 
-// --------------------------------------------------------------------------------- Page Reset & ::Selection --------------------
-
+// --------------------------------------------------------------------------------- Page Reset & ::Selection ******
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -17,9 +23,122 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 ::selection {
   background-color: #78f8e1;
   color: black;
 }
 
-// --------------------------------------------------------------------------------- Variables --------------------
+// --------------------------------------------------------------------------------- Header ******
+header {
+  width: 100vw;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: rgb(85, 85, 85);
+      font-size: 13px;
+      margin: 0 15px;
+      &:nth-of-type(2) {
+        margin-left: auto;
+      }
+      &:nth-of-type(5) {
+        margin-left: auto;
+      }
+      &:last-of-type {
+        color: white;
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 6px 10px;
+        min-width: 80px;
+        max-width: 80px;
+        transition: background-color 220ms ease-in-out;
+        &:hover {
+          color: black;
+          background-color: transparent;
+        }
+      }
+    }
+    #toggle-btn {
+      height: 40px;
+      width: 40px;
+      margin-left: auto;
+      margin-right: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      cursor: pointer;
+      transition: all 100ms ease-in-out;
+      &:hover {
+        padding: 5px;
+      }
+      display: none;
+      .line {
+        display: block;
+        height: 2px;
+        width: 30px;
+        border-radius: 20px;
+        background-color: black;
+      }
+    }
+    #mob-nav {
+      width: 100%;
+      background-color: rgba(204, 204, 204, 0.9);
+      position: absolute;
+      top: -350px;
+      left: 0;
+      transition: all 350ms ease-in-out;
+      a {
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: block;
+        margin: 20px auto;
+        padding-bottom: 12px;
+        font-size: 16px;
+        color: black;
+        &:last-of-type {
+          color: white;
+          max-width: 200px;
+          border-bottom: 1px solid black;
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 100vw;
+    height: 60px;
+    position: sticky;
+    nav {
+      a {
+        display: none;
+        &:first-of-type {
+          display: inline-block;
+        }
+      }
+      #toggle-btn {
+        display: flex;
+      }
+      .show {
+        top: 60px !important;
+      }
+    }
+  }
+}
