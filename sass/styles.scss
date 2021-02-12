@@ -1,16 +1,7 @@
 // --------------------------------------------------------------------------------- Variables ******
 @import "variables";
+@import "extends";
 @import "animations";
-// --------------------------------------------------------------------------------- Extends ******
-%h3 {
-  letter-spacing: -0.05em;
-  font-size: 3.75rem;
-  font-weight: 700;
-  margin-top: 35px;
-  margin-bottom: 35px;
-  text-align: center;
-  text-transform: capitalize;
-}
 
 // --------------------------------------------------------------------------------- Page Reset & ::Selection ******
 * {
@@ -157,7 +148,6 @@ header {
 // --------------------------------------------------------------------------------- Hero Section ******
 
 #hero {
-  height: 70vh;
   width: 100vw;
   h2 {
     text-align: center;
@@ -252,5 +242,144 @@ header {
       width: 90%;
       font-size: 16px;
     }
+  }
+}
+
+// --------------------------------------------------------------------------------- Develop Section ******
+
+#develop {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  h6 {
+    @extend %h6;
+  }
+  .path-line {
+    @extend %path-line;
+    background: $blue-gradient;
+  }
+  .circled-number {
+    @extend %circled-number;
+    background: $blue-gradient;
+  }
+  .gradient-word {
+    @extend %gradient-word;
+    color: #007cf0;
+  }
+}
+
+// --------------------------------------------------------------------------------- Start Section ******
+
+#start {
+  h3 {
+    @extend %h3;
+  }
+  .pars {
+    margin: auto;
+    width: 70%;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    p {
+      flex-wrap: wrap;
+      flex-basis: 50%;
+      padding: 10px 20px;
+      line-height: 1.5rem;
+      color: $grey-color;
+    }
+  }
+
+  .flex-container {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .left {
+      flex-basis: 50%;
+      img {
+        max-width: 90%;
+      }
+    }
+    .right {
+      height: 100%;
+      flex-basis: 50%;
+      div {
+        &:nth-of-type(2) {
+          margin-bottom: 8vmax;
+          margin-top: 8vmax;
+        }
+        h4 {
+          width: 100%;
+          font-size: 20px;
+        }
+        p {
+          width: 100%;
+          color: $grey-color;
+        }
+      }
+    }
+  }
+
+  h6 {
+    @extend %h6;
+  }
+}
+
+@media (max-width: 992px) {
+  #start {
+    .pars {
+      width: 90%;
+      margin-top: 50px;
+      display: block;
+    }
+
+    .flex-container {
+      width: 90%;
+      margin: 50px auto;
+      flex-direction: column;
+      align-items: center;
+      .left {
+        flex-basis: 100%;
+        img {
+          max-width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+      .right {
+        width: 90%;
+        margin: auto;
+        div {
+          &:nth-of-type(2) {
+            margin-bottom: 5vmax;
+            margin-top: 5vmax;
+          }
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------------------------------------- Preview Section ******
+
+#preview {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  h6 {
+    @extend %h6;
+  }
+  .path-line {
+    @extend %path-line;
+    background: $purple-gradient;
+  }
+  .circled-number {
+    @extend %circled-number;
+    background: $purple-gradient;
+  }
+  .gradient-word {
+    @extend %gradient-word;
+    color: #7928ca;
   }
 }
