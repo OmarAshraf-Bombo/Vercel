@@ -27,3 +27,10 @@ document.addEventListener("scroll", function () {
     header[0].style.borderBottom = "none";
   }
 });
+
+// --------------------------------------------------------------------------------- Updated Date in Footer Copyrights ******
+
+let dateSpan = document.getElementById("datenow");
+let year = new Date().getFullYear();
+console.log(year);
+dateSpan.textContent = year;
